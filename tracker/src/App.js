@@ -30,10 +30,12 @@ function App() {
   return (
     <div className="App">
       
-      <DisplayProblem info={data.items}/>
+      
       <p><b>Add a Problem</b></p>
       <AddProblem addProblemCallback={addProblemToData}/>
       <SearchBar callback={updateSearch}/>
+      <DisplayProblem info={data.items}/>
+      
       
     </div>
   );

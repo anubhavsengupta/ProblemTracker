@@ -19,22 +19,30 @@ function SearchBar(props) {
     }
 
     return (
-        <div className="App">
+        <div className="App search-wrapper">
             <h2>Search for a problem</h2>
-            <form>
-                <label htmlFor="problem-field">Problem: </label>
-                <input type="text" id="problem-field" value={problemField} 
-                onChange={(e) => setProblemField(e.target.value)}/>
-                <label htmlFor="problem-category">Category: </label>
-                <input type="text" id="problem-category" value={problemCategory} 
-                onChange={(e) => setProblemCategory(e.target.value)}/>
-                <label htmlFor="problem-link">Link: </label>
-                <input type="text" id="problem-link" value={problemLink} 
-                onChange={(e) => setProblemLink(e.target.value)}/>
-                <label htmlFor="problem-site">Site: </label>
-                <input type="text" id="problem-site" value={problemSite} 
-                onChange={(e) => setProblemSite(e.target.value)}/>
-                <button onClick={searchBtnPressed} type="Button">Search</button>
+            <form> 
+                <div class="box1"> 
+                    <label htmlFor="problem-field">Problem: </label>
+                    <input type="text" class="search-box" id="problem-field" value={problemField} 
+                    onChange={(e) => setProblemField(e.target.value)}/>
+                </div>
+                <div class="box1"> 
+                    <label htmlFor="problem-category">Category: </label>
+                    <input type="text" id="problem-category"  class="search-box"value={problemCategory} 
+                    onChange={(e) => setProblemCategory(e.target.value)}/>
+                </div>
+                <div class="box1"> 
+                    <label htmlFor="problem-link">Link: </label>
+                    <input type="text" id="problem-link" class="search-box" value={problemLink} 
+                    onChange={(e) => setProblemLink(e.target.value)}/>
+                </div>
+                <div class="box1"> 
+                    <label htmlFor="problem-site">Site: </label>
+                    <input type="text" id="problem-site" class="search-box" value={problemSite} 
+                    onChange={(e) => setProblemSite(e.target.value)}/>
+                </div>
+                <button class="search-btn" onClick={searchBtnPressed} type="Button" >Search</button>
             </form> 
         </div>
     )

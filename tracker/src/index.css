@@ -12,4 +12,47 @@ code {
     monospace;
 }
 
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+  
+}
 
+.search-box {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.box1 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+
+.search-btn {
+	border-radius: 14px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  margin:auto !important;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+button:hover {
+  background-color: lightcoral !important;
+}
+
+button:active {
+  transform: scale(0.8);
+}
