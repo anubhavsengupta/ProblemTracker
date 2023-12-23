@@ -1,30 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Comp1 from './components/comp1';
 import { useState } from'react';
 import SearchBar from './components/SearchBar';
 import AddProblem from './components/AddProblem';
 import DisplayProblem from './components/DisplayProblem';
-
+import Button from '@mui/material/Button';
 
 
 function App() {
-   const [filters, setFilters] = useState({});
+  // set state for data and filters.
+   const [filters, setFilters] = useState("");
    const [data, setData] = useState({items: []});
 
+   
    const updateSearch = (params) => {
-    console.log(params);
     setFilters(params);
    }
-
+   // function adds a newly created problem to the list of problems.
    const addProblemToData = (params) => {
       let currentItems = data["items"]
       params.id = params.length;
       currentItems.push(params);
       setData({items: currentItems});
+      // there will exist no filters.
+      setFilters("");
       
-      console.log(data);
+      
    }
 
   return (
@@ -33,12 +35,17 @@ function App() {
       
       <p><b>Add a Problem</b></p>
       <AddProblem addProblemCallback={addProblemToData}/>
+
       <SearchBar callback={updateSearch}/>
-      <DisplayProblem info={data.items}/>
+      <DisplayProblem info={data.items} filters={filters}/>
       
       
     </div>
   );
 }
+
+
+
+
 
 export default App;

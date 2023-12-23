@@ -14,8 +14,20 @@ function SearchBar(props) {
     
 
     function searchBtnPressed() {
-        console.log(problemField, problemCategory, problemLink, problemSite);
-        props.callback({p1: problemField, p2: problemCategory, p3: problemLink, p4: problemSite});
+        
+        
+        console.log("In callback", problemField);
+        props.callback(problemField);
+    }
+
+    function resetButtonPressed() {
+        
+        // clear search fields
+        setProblemField("");
+        setProblemCategory("");
+        setProblemLink("");
+        setProblemSite("");
+        props.callback("");
     }
 
     return (
@@ -43,6 +55,7 @@ function SearchBar(props) {
                     onChange={(e) => setProblemSite(e.target.value)}/>
                 </div>
                 <button class="search-btn" onClick={searchBtnPressed} type="Button" >Search</button>
+                <button class="search-btn" onClick={resetButtonPressed} type="Button" >Reset</button>
             </form> 
         </div>
     )

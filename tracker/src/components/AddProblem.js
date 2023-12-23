@@ -14,7 +14,7 @@ function AddProblem(props) {
     
 
     function addProblemPressed() {
-        console.log(problemField, problemCategory, problemLink, problemSite);
+        
         props.addProblemCallback({p1: problemField, p2: problemCategory, p3: problemLink, p4: problemSite});
         // clear search fields
         setProblemField("");
