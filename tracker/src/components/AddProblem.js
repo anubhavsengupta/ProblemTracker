@@ -24,7 +24,7 @@ function AddProblem(props) {
     }
 
     return (
-        <div className="App">
+        <div className="App search-app">
             
             <form>
                 <label htmlFor="problem-field">Problem: </label>
@@ -33,13 +33,13 @@ function AddProblem(props) {
                 <label htmlFor="problem-category">Category: </label>
                 <input type="text" id="problem-category" value={problemCategory} 
                 onChange={(e) => setProblemCategory(e.target.value)}/>
-                <label htmlFor="problem-link">Link: </label>
+                <label htmlFor="problem-link">Difficulty: </label>
                 <input type="text" id="problem-link" value={problemLink} 
                 onChange={(e) => setProblemLink(e.target.value)}/>
                 <label htmlFor="problem-site">Site: </label>
                 <input type="text" id="problem-site" value={problemSite} 
                 onChange={(e) => setProblemSite(e.target.value)}/>
-                <button onClick={addProblemPressed} type="Button">Add Problem,</button>
+                <button onClick={addProblemPressed} type="Button">Add Problem</button>
             </form> 
         </div>
     )

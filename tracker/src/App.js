@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       
       
-      <p><b>Add a Problem</b></p>
+      <p id="head"><b>Add a Problem</b></p>
       <AddProblem addProblemCallback={addProblemToData}/>
 
       <SearchBar callback={updateSearch}/>

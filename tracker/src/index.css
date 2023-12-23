@@ -12,6 +12,17 @@ code {
     monospace;
 }
 
+.search-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.search-app label {
+  padding: 8px;
+}
+
 .search-wrapper {
   display: flex;
   align-items: center;
@@ -65,7 +76,6 @@ button {
 .AppTable {
   width: 100%;
   height: 20vh;
-  margin-top: 2%;
   
 }
 
@@ -82,5 +92,9 @@ th {
 }
 
 td {
+  text-align: center;
+}
+
+#head {
   text-align: center;
 }

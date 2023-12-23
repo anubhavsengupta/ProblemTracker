@@ -13,11 +13,11 @@ function DisplayProblem(props) {
                         <tr>
                             <th>Name</th>
                             <th>Category</th>
-                            <th>Link</th>
+                            <th>Difficulty</th>
                             <th>Site</th>
                         </tr>
 
-                    
+                <tbody>
                 {props.info.map((item) => {
                     
                     if ((item.p1 !== undefined && props.filters === "") || props.filters === item.p1) {
@@ -30,6 +30,7 @@ function DisplayProblem(props) {
                     }
 
                     })}
+                    </tbody>
                     </table>
                 </div>
             )

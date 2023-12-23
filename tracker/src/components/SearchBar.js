@@ -45,7 +45,7 @@ function SearchBar(props) {
                     onChange={(e) => setProblemCategory(e.target.value)}/>
                 </div>
                 <div class="box1"> 
-                    <label htmlFor="problem-link">Link: </label>
+                    <label htmlFor="problem-link">Difficulty: </label>
                     <input type="text" id="problem-link" class="search-box" value={problemLink} 
                     onChange={(e) => setProblemLink(e.target.value)}/>
                 </div>
