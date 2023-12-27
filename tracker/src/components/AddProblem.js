@@ -9,10 +9,11 @@ function AddProblem(props) {
     // define state variables for different types of queries
     const [problemField, setProblemField] = useState("");
     const [problemCategory, setProblemCategory] = useState("");
-    const [problemLink, setProblemLink] = useState("");
+    const [problemLink, setProblemLink] = useState(""); 
     const [problemSite, setProblemSite] = useState("");
     
 
+    
     function addProblemPressed() {
         
         props.addProblemCallback({p1: problemField, p2: problemCategory, p3: problemLink, p4: problemSite});
